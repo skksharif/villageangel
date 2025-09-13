@@ -1,32 +1,37 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     // Reset form
-    setFormData({ name: '', email: '', message: '' });
-    alert('Thank you for your message! We\'ll get back to you soon.');
+    setFormData({ name: "", email: "", message: "" });
+    alert("Thank you for your message! We'll get back to you soon.");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-cream-50 to-gold-50">
+    <section
+      id="contact"
+      className="py-20 bg-gradient-to-br from-cream-50 to-gold-50"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
@@ -41,7 +46,8 @@ export default function Contact() {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-gold-500 to-gold-300 rounded-full mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Have questions about our collections or need styling advice? We'd love to hear from you.
+            Have questions about our collections or need styling advice? We'd
+            love to hear from you.
           </p>
         </motion.div>
 
@@ -54,11 +60,16 @@ export default function Contact() {
             viewport={{ once: true }}
             className="bg-white rounded-2xl shadow-xl p-8"
           >
-            <h3 className="text-2xl font-semibold text-amber-900 mb-6">Send us a Message</h3>
-            
+            <h3 className="text-2xl font-semibold text-amber-900 mb-6">
+              Send us a Message
+            </h3>
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Full Name
                 </label>
                 <input
@@ -72,9 +83,12 @@ export default function Contact() {
                   placeholder="Enter your full name"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Email Address
                 </label>
                 <input
@@ -88,9 +102,12 @@ export default function Contact() {
                   placeholder="Enter your email address"
                 />
               </div>
-              
+
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -104,7 +121,7 @@ export default function Contact() {
                   placeholder="Tell us how we can help you..."
                 />
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-2"
@@ -124,59 +141,55 @@ export default function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold text-amber-900 mb-6">Visit Our Boutique</h3>
-              
+              <h3 className="text-2xl font-semibold text-amber-900 mb-6">
+                Visit Our Boutique
+              </h3>
+
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-6 h-6 text-gold-600" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Address</h4>
+                    <h4 className="font-semibold text-gray-900 mb-1">
+                      Address
+                    </h4>
                     <p className="text-gray-600">
-                      123 Heritage Street, Fashion District<br />
-                      Mumbai, Maharashtra 400001<br />
-                      India
+                      VILLAGE ANGEL TEXTILES<br/>
+                      H NO.4 -1194 MAR THANDANAGAR NEW HAFEZPET, HYDERABAD,
+                      <br/>Telangana, India - 500049
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-6 h-6 text-gold-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Phone</h4>
-                    <p className="text-gray-600">+91 98765 43210</p>
+                    <a href="tel:+918008740770" className="text-gray-600">
+                      +91 8008740770
+                    </a>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-6 h-6 text-gold-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                    <p className="text-gray-600">hello@villageangel.com</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-6 h-6 text-gold-600" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">Store Hours</h4>
-                    <p className="text-gray-600">
-                      Monday - Saturday: 10:00 AM - 8:00 PM<br />
-                      Sunday: 11:00 AM - 6:00 PM
-                    </p>
+                    <a
+                      href="mailto:infovillageangel@gmail.com"
+                      className="text-gray-600"
+                    >
+                      infovillageangel@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-
-    
           </motion.div>
         </div>
       </div>
