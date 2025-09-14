@@ -155,7 +155,7 @@ export default function Contact() {
                       Address
                     </h4>
                     <p className="text-gray-600">
-                      VILLAGE ANGEL TEXTILES<br/>
+                      VILLAGE ANGEL TEXTILES PRIVATE LIMITED<br/>
                       H NO.4 -1194 MAR THANDANAGAR NEW HAFEZPET, HYDERABAD,
                       <br/>Telangana, India - 500049
                     </p>
