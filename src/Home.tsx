@@ -18,12 +18,16 @@ export default function Home() {
         id="hero"
         className="h-screen bg-[url('/bg.png')] bg-cover bg-center flex flex-col items-center justify-center text-center px-6"
       >
-        <h1 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
-          Village Angel <sup className="ml-[-20px]">®</sup>
-
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white drop-shadow-lg relative inline-block">
+          Village Angel
+          <sup className="absolute -top-1">
+            ®
+          </sup>
         </h1>
+
         <p className="mt-4 text-lg md:text-xl text-white max-w-2xl">
-          Authentic Boutique Dresses – Where Elegance Meets Tradition
+          Authentic Boutique Dresses – Online Pop-Up Boutique – Where Elegance
+          Meets Tradition
         </p>
         <div className="mt-6 flex gap-4">
           <a
