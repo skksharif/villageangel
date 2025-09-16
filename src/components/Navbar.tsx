@@ -62,7 +62,7 @@ export default function Navbar() {
             src="/logo.png"
             alt="Village Angel Logo"
             className={`object-contain transition-all duration-300 border-4 border-[#f2c380] p-1 border-double pl-2 ${
-              isScrolled ? "w-10 md:w-14" : "w-12 md:w-16"
+              isScrolled ? "w-12 md:w-14" : "w-16 md:w-16"
             }`}
           />
 
