@@ -19,7 +19,8 @@ export default function Home() {
         className="h-screen bg-[url('/bg.png')] bg-cover bg-center flex flex-col items-center justify-center text-center px-6"
       >
         <h1 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
-          Village Angel
+          Village Angel <sup className="ml-[-20px]">®</sup>
+
         </h1>
         <p className="mt-4 text-lg md:text-xl text-white max-w-2xl">
           Authentic Boutique Dresses – Where Elegance Meets Tradition

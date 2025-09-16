@@ -54,3 +54,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 200ms;
 }
+.double-border {
+  border: 4px double #f2c380;
+  padding: 4px;
+}
