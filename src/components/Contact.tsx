@@ -11,11 +11,23 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted:", formData);
+
+    const { name, email, message } = formData;
+
+    // Construct WhatsApp message
+    const whatsappMessage = `Hello, my name is ${name}. 
+Email: ${email}
+Message: ${message}`;
+
+    // Encode and open WhatsApp
+    const whatsappUrl = `https://wa.me/918008740770?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+
+    window.open(whatsappUrl, "_blank");
+
     // Reset form
     setFormData({ name: "", email: "", message: "" });
-    alert("Thank you for your message! We'll get back to you soon.");
   };
 
   const handleChange = (
@@ -155,9 +167,11 @@ export default function Contact() {
                       Address
                     </h4>
                     <p className="text-gray-600">
-                      VILLAGE ANGEL TEXTILES PRIVATE LIMITED<br/>
+                      VILLAGE ANGEL TEXTILES PRIVATE LIMITED
+                      <br />
                       H NO.4 -1194 MAR THANDANAGAR NEW HAFEZPET, HYDERABAD,
-                      <br/>Telangana, India - 500049
+                      <br />
+                      Telangana, India - 500049
                     </p>
                   </div>
                 </div>
